@@ -15,11 +15,13 @@ source:
     - su2-meson.patch
 
 build:
-  number: 2
-  skip: win or osx or match(python, ">=3.12")
+  number: 3
+  skip: win or match(python, ">=3.12")
 
 requirements:
   build:
+    - cmake
+    - ninja
     - make
     - ${{ stdlib('c') }}
     - ${{ compiler('c') }}
