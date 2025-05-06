@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: su2
-  version: 8.1.0
+  version: "8.2.0"
 
 package:
   name: ${{ name }}
@@ -10,12 +10,12 @@ package:
 
 source:
   url: https://github.com/su2code/SU2/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: d550be60ccc8cb907d53a0531715b229585f1e92e2e8e22ab2e8a181d096e7c9
+  sha256: d35922914028a03f3b1cd04763e5302d1023f7790a1d2e4a6b091eb3b12d6944
   patches:
     - su2-meson.patch
 
 build:
-  number: 3
+  number: 0
   skip: win or osx or match(python, ">=3.12")
 
 requirements:
