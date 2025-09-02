@@ -15,7 +15,7 @@ source:
     - su2-meson.patch
 
 build:
-  number: 0
+  number: 1
   skip: win or osx or match(python, ">=3.12")
 
 requirements:
