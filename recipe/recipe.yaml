@@ -37,6 +37,7 @@ requirements:
     - python
     - libopenblas
     - openmpi
+    - lapack
 
 tests:
   - script:
