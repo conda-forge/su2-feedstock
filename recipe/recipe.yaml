@@ -32,6 +32,7 @@ requirements:
     - mpi4py
     - openblas
     - openmpi
+    - lapack
     - zlib
   run:
     - python
