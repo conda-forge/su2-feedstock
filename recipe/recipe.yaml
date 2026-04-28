@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: su2
-  version: "8.3.0"
+  version: "8.5.0"
 
 package:
   name: ${{ name }}
@@ -10,12 +10,12 @@ package:
 
 source:
   url: https://github.com/su2code/SU2/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 33079d7988ea3bd8b0020f5c8a33b27caea6e357c1cb78fda8b1508c594444ef
+  sha256: c6463b667ed81ec8fef1efa015f1368d8ceb29078cfea899a3fad5c7c232f3a9
   patches:
     - su2-meson.patch
 
 build:
-  number: 1
+  number: 0
   skip: win or osx or match(python, ">=3.12")
 
 requirements:
@@ -32,11 +32,13 @@ requirements:
     - mpi4py
     - openblas
     - openmpi
+    - lapack
     - zlib
   run:
     - python
     - libopenblas
     - openmpi
+    - lapack
 
 tests:
   - script:
